@@ -8,20 +8,33 @@
             outline: none;
         }
         
-        /* Ваши новые правила */
+        /* Ваши правила для заголовка */
         .hero {
-            margin-top: 10px; /* На компьютере */
+            margin-top: 10px;
         }
         
         @media screen and (max-width: 768px) {
             .hero {
-                margin-top: 30px; /* На планшете */
+                margin-top: 30px;
             }
         }
         
         @media screen and (max-width: 480px) {
             .hero {
-                margin-top: 60px; /* На телефоне */
+                margin-top: 60px;
+            }
+        }
+        
+        /* Новые правила для стрелок */
+        @media screen and (max-width: 768px) {
+            .lottie-file-middle {
+                margin-top: 80px; /* Опускаем стрелки вниз */
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .lottie-file-middle {
+                margin-top: 120px; /* Еще ниже на маленьких экранах */
             }
         }
     </style>
