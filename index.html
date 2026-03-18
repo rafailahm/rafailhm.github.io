@@ -1,67 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agency Pro | Modern Mindset</title>
-    <!-- Подключаем жирный гротеск, похожий на тот, что используется в подобных проектах -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,800;14..32,900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+export default function ImanInspiredPersonalSite() {
+  const companies = [
+    {
+      name: 'Growth Studio',
+      desc: 'Strategy, positioning, and acquisition systems for modern digital brands.',
+    },
+    {
+      name: 'Creator Lab',
+      desc: 'Content systems and personal-brand execution for founders and operators.',
+    },
+    {
+      name: 'Scale OS',
+      desc: 'Operational infrastructure, automation, and team workflows for scaling.',
+    },
+    {
+      name: 'Capital Network',
+      desc: 'Advisory and deal flow support for high-agency entrepreneurs.',
+    },
+    {
+      name: 'Skill Academy',
+      desc: 'Programs focused on monetizable digital skills and disciplined execution.',
+    },
+    {
+      name: 'Peak Day',
+      desc: 'A performance-focused lifestyle brand built around energy, discipline, and output.',
+    },
+  ];
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.5;
-        }
+  const impact = [
+    {
+      title: 'Education Access',
+      text: 'Backing long-term projects that improve access to practical education and opportunity.',
+    },
+    {
+      title: 'Team Challenges',
+      text: 'Using shared endurance events and fundraising campaigns to support meaningful causes.',
+    },
+    {
+      title: 'Nutrition Support',
+      text: 'Partnering with community initiatives to support early development and wellbeing.',
+    },
+  ];
 
-        /* Контейнер для контента */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+  return (
+    <div className="min-h-screen bg-neutral-950 text-white selection:bg-white selection:text-black">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+          <div className="text-sm font-semibold tracking-[0.28em] uppercase">RA</div>
+          <nav className="hidden gap-8 text-sm text-white/70 md:flex">
+            <a href="#about" className="transition hover:text-white">About</a>
+            <a href="#companies" className="transition hover:text-white">Companies</a>
+            <a href="#impact" className="transition hover:text-white">Impact</a>
+            <a href="#contact" className="transition hover:text-white">Contact</a>
+          </nav>
+        </div>
+      </header>
 
-        /* Навигация (простая, как в лендингах) */
-        .navbar {
-            padding: 24px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.9);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-        }
+      <main>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.13),transparent_34%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.08),transparent_25%)]" />
+          <div className="mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-28">
+            <div className="relative z-10">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-white/55">Entrepreneur • Operator • Builder</p>
+              <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] md:text-7xl lg:text-8xl">
+                Build a brand people remember.
+              </h1>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
+                A sharp, modern personal site for a founder who builds companies, drives culture,
+                and turns attention into leverage.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:scale-[1.02]"
+                >
+                  Get in Touch
+                </a>
+                <a
+                  href="#companies"
+                  className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-white/35 hover:bg-white/5"
+                >
+                  Explore Companies
+                </a>
+              </div>
+            </div>
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+            <div className="relative z-10">
+              <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-4 shadow-2xl shadow-black/30 backdrop-blur">
+                <div className="aspect-[4/5] rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.02))] p-6">
+                  <div className="flex h-full flex-col justify-between rounded-[1.25rem] border border-white/10 bg-neutral-900/80 p-6">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.28em] text-white/45">Profile</p>
+                      <div className="mt-4 h-64 rounded-[1.25rem] bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.18),transparent_35%),linear-gradient(180deg,#252525,#0b0b0b)]" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-semibold">Rafail Ahmadov</p>
+                      <p className="mt-2 max-w-sm text-sm leading-6 text-white/65">
+                        Founder focused on media, education, product, and high-performance execution.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        .logo {
-            font-size: 24px;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        <section id="about" className="border-t border-white/10">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/45">About</p>
+              <h2 className="mt-4 text-3xl font-semibold md:text-5xl">A personal brand built on discipline, clarity, and execution.</h2>
+            </div>
+            <div className="space-y-6 text-base leading-8 text-white/72 md:text-lg">
+              <p>
+                This page is designed for founders who want a premium digital presence: direct,
+                editorial, and confident without feeling noisy.
+              </p>
+              <p>
+                It balances a minimalist luxury aesthetic with strong hierarchy, sharp copy, and
+                sections that naturally support credibility, ventures, mission, and contact.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            font-weight: 600;
-            font-size: 14px;
+        <section id="companies" className="border-t border-white/10 bg-white/[0.02]">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/45">Companies</p>
+                <h2 className="mt-4 text-3xl font-semibold md:text-5xl">A portfolio of brands and systems.</h2>
+              </div>
+              <p className="max-w-xl text-sm leading-7 text-white/60 md:text-base">
+                Showcase ventures with concise positioning and a uniform premium layout.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {companies.map((item) => (
+                <div
+                  key={item.name}
+                  className="group rounded-[1.75rem] border border-white/10 bg-neutral-900/60 p-6 transition hover:-translate-y-1 hover:border-white/25 hover:bg-neutral-900"
+                >
+                  <div className="mb-6 h-40 rounded-[1.25rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02),transparent)]" />
+                  <h3 className="text-2xl font-semibold">{item.name}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/65">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="impact" className="border-t border-white/10">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="mb-12 max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/45">Impact</p>
+              <h2 className="mt-4 text-3xl font-semibold md:text-5xl">You get what you give.</h2>
+              <p className="mt-5 text-base leading-8 text-white/68 md:text-lg">
+                A clean section for philanthropy, purpose, and the values behind the business.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {impact.map((item) => (
+                <div key={item.title} className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7">
+                  <div className="mb-5 h-12 w-12 rounded-2xl border border-white/10 bg-white/5" />
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/65">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="border-t border-white/10">
+          <div className="mx-auto max-w-5xl px-6 py-20 text-center lg:px-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/45">Contact</p>
+            <h2 className="mt-4 text-3xl font-semibold md:text-6xl">Let’s build something that looks expensive and converts.</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/68 md:text-lg">
+              Replace this with your email capture, booking CTA, or direct contact information.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a href="mailto:hello@example.com" className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black">
+                hello@example.com
+              </a>
+              <a href="#" className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white/90">
+                Instagram
+              </a>
+              <a href="#" className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white/90">
+                YouTube
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
             text-transform: uppercase;
             letter-spacing: 1px;
         }
