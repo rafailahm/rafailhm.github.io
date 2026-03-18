@@ -8,7 +8,39 @@
             outline: none;
         }
         
-        
+        .home-hero,
+.home-hero-component,
+.home-hero-content {
+  position: relative;
+}
+
+.lottie-file-middle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px; /* регулируй */
+  top: auto !important;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .lottie-file-middle {
+    bottom: 12px;
+    top: auto !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home-hero-component.home-3 {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .home-hero-content {
+    position: relative;
+    z-index: 3;
+  }
+}
     </style>
     <meta charset="utf-8">
     <title>Rafael Ahmadov</title>
