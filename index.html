@@ -23,20 +23,19 @@
   .lottie-file-middle {
     position: absolute !important;
     left: 50% !important;
-    right: auto !important;
     top: auto !important;
+    right: auto !important;
     bottom: -8px !important;
-    transform: translateX(-50%) !important;
+    transform: translateX(-50%) translateY(var(--moveY, 0px)) !important;
     z-index: 50 !important;
     width: auto !important;
     margin: 0 !important;
     display: block !important;
-    pointer-events: none !important;
-    will-change: transform !important;
   }
 
   .lottie-animation {
     position: relative !important;
+    transform: none !important;
     margin: 0 auto !important;
   }
 
@@ -52,13 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const el = document.querySelector(".lottie-file-middle");
   if (!el) return;
 
-  function update() {
-    const y = window.scrollY * 0.15; 
-    el.style.transform = `translateX(-50%) translateY(${y}px)`;
+  function updateMove() {
+    const y = window.scrollY * 0.25; 
+    el.style.setProperty("--moveY", y + "px");
   }
 
-  update();
-  window.addEventListener("scroll", update, { passive: true });
+  updateMove();
+  window.addEventListener("scroll", updateMove, { passive: true });
+  window.addEventListener("wheel", updateMove, { passive: true });
 });
 </script>
     <meta charset="utf-8">
