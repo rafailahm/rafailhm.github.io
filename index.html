@@ -3,7 +3,64 @@
     class="w-mod-js w-mod-ix lenis lenis-smooth wf-inter-n6-active wf-inter-n5-active wf-inter-n2-active wf-inter-n7-active wf-inter-n9-active wf-inter-n4-active wf-inter-n3-active wf-inter-n8-active wf-playfairdisplay-n7-active wf-playfairdisplay-n9-active wf-playfairdisplay-n8-active wf-playfairdisplay-n4-active wf-playfairdisplay-n5-active wf-playfairdisplay-n6-active wf-playfairdisplay-i5-active wf-playfairdisplay-i4-active wf-playfairdisplay-i7-active wf-playfairdisplay-i9-active wf-playfairdisplay-i6-active wf-playfairdisplay-i8-active wf-lora-n6-active wf-lora-n5-active wf-lora-n4-active wf-lora-n7-active wf-lora-i7-active wf-lora-i4-active wf-lora-i6-active wf-lora-i5-active wf-kalnia-n7-active wf-kalnia-n2-active wf-kalnia-n6-active wf-kalnia-n1-active wf-kalnia-n4-active wf-kalnia-n5-active wf-kalnia-n3-active wf-active">
 
 <head>
-    <style> .wf-force-outline-none[tabindex="-1"]:focus { outline: none; } .home-hero.home-3, .home-hero-component.home-3 { position: relative !important; min-height: 90svh !important; overflow: hidden !important; } .home-hero-content { position: relative !important; z-index: 5 !important; } .lottie-file-middle { position: absolute !important; left: 50% !important; top: auto !important; right: auto !important; bottom: -8px !important; /* вот это главное */ transform: translateX(-50%) !important; z-index: 50 !important; width: auto !important; margin: 0 !important; display: block !important; } .lottie-animation { position: relative !important; transform: none !important; margin: 0 auto !important; } @media (max-width: 767px) { .lottie-file-middle { bottom: -40vh !important; /* на телефоне ещё ниже */ } } </style>
+    <style>
+  .wf-force-outline-none[tabindex="-1"]:focus {
+    outline: none;
+  }
+
+  .home-hero.home-3,
+  .home-hero-component.home-3 {
+    position: relative !important;
+    min-height: 90svh !important;
+    overflow: hidden !important;
+  }
+
+  .home-hero-content {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+
+  .lottie-file-middle {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: -8px !important;
+    transform: translateX(-50%) !important;
+    z-index: 50 !important;
+    width: auto !important;
+    margin: 0 !important;
+    display: block !important;
+    pointer-events: none !important;
+    will-change: transform !important;
+  }
+
+  .lottie-animation {
+    position: relative !important;
+    margin: 0 auto !important;
+  }
+
+  @media (max-width: 767px) {
+    .lottie-file-middle {
+      bottom: -40vh !important;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const el = document.querySelector(".lottie-file-middle");
+  if (!el) return;
+
+  function update() {
+    const y = window.scrollY * 0.15; 
+    el.style.transform = `translateX(-50%) translateY(${y}px)`;
+  }
+
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+});
+</script>
     <meta charset="utf-8">
     <title>Rafael Ahmadov</title>
     <meta content="Rafael Ahmadov is a Azerbaijani businessman, entrepreneur, motivational speaker and online educator. Iman is an advocate for universal education and a committed philanthropist."
