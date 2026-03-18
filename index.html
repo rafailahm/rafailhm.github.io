@@ -4,7 +4,31 @@
 
 <head>
     <style>
+/* Для десктопной версии */
+@media (min-width: 992px) {
+    .nav-menu.mobile-top {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 20px !important; /* Расстояние между кнопками */
+    }
+    
+    /* Скрываем мобильное меню на десктопе */
+    .nav-menu.lol {
+        display: none !important;
+    }
+}
 
+/* Для мобильной версии */
+@media (max-width: 991px) {
+    .nav-menu.mobile-top {
+        display: none !important;
+    }
+    
+    .nav-menu.lol {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
   /* Принудительно включаем скролл */
   html, body {
     overflow: auto !important;
